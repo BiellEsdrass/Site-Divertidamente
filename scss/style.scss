@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    height: 90vh;
+    width: 100%;
+    background-image: url(/imgs/backGroundHeader.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+
+.header{
+
+    &__navbar{
+        z-index: 1;
+        height: auto;
+        padding: .5rem 1.5rem;
+        
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.484);
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &__logo img{
+            height: 3rem;
+        }
+
+        &__menus{
+
+            
+            a{
+                color: white;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 19px;
+                margin-left: .8rem;
+            }
+        }
+    }
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%,-50%);
+
+
+        img{
+            height: 22rem;
+        }
+    }
+}
+
+.persona{
+    position: absolute;
+    top: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem 1rem;
+    gap: 1rem;
+
+    background-image: url(/imgs/backSection.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .5s;
+
+    img{
+        opacity: 500ms;
+        height: auto;
+        width: 45vw;
+        border-radius: 25px;
+        gap: .5rem;
+        cursor: pointer;
+        box-shadow: 1px 2px 8px 10px rgba(0, 0, 0, 0.154);
+        
+        &:hover{
+            filter: contrast(110%);
+            box-shadow: 1px 2px 8px 10px rgba(0, 0, 0, 0.292);
+            transform: translateY(-.5rem) scale(1.01);
+        }
+    }
+}
+
+
+
+
+
+
+// .btnWatch{
+//     position: relative;
+//     font-weight: 600;
+//     font-size: 18px;
+//     color: #e8f0ffc4;
+//     height: 3rem;
+//     padding: .5rem 5rem;
+//     outline: none;
+//     border: 2px solid #e8f0ff;
+//     background-color: transparent;
+//     border-radius: 5px;
+//     cursor: pointer;
+
+//     &:hover{
+//         color: #e8f0ff;
+//     }
+
+//     &:after{
+//         content: "";
+//         position: absolute;
+//         width: 100%;
+//         top: 7px;
+//         left: 7px;
+//         height: 100%;
+//         background-color: rgba(54, 175, 255, 0.669);
+//         z-index: -1;
+//         transition: all .5s;
+//         border-radius: inherit;
+//     }
+//     &:hover:after{
+//         top: 0px;
+//         left: 0px;
+//         background-color: rgb(54, 175, 255);
+//     }
+// }
