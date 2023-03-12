@@ -1,45 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 
     height: 90vh;
     width: 100%;
     background-image: url(/imgs/backGroundHeader.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center top;
 }
 
-.header{
+.header {
 
-    &__navbar{
+    &__navbar {
         z-index: 1;
         height: auto;
         padding: .5rem 1.5rem;
-        
+
         background-color: transparent;
         backdrop-filter: blur(10px);
         border-bottom: 2px solid rgba(255, 255, 255, 0.484);
-        
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
 
-        &__logo img{
+        &__logo img {
             height: 3rem;
         }
 
-        &__menus{
+        &__menus {
 
-            
-            a{
+
+            a {
                 color: white;
                 text-decoration: none;
                 font-weight: 400;
@@ -50,7 +53,7 @@ body{
     }
 
 
-    &__box{
+    &__box {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,18 +62,200 @@ body{
         position: absolute;
         top: 50%;
         left: 20%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
 
 
-        img{
+        img {
             height: 22rem;
         }
     }
 }
 
-.persona{
-    position: absolute;
-    top: 90vh;
+
+.info{
+    padding: 5rem 3rem;
+    background-color: transparent;
+    backdrop-filter: brightness(50%) blur(10px);
+    border-top: 2px solid rgba(255, 255, 255, 0.447);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.447);
+
+    position: relative;
+    top: 95vh;
+    height: 75vh;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+
+    .trailer__blur{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.836);
+
+        position: absolute;
+        left: 0;
+        z-index: 100;
+
+        display: none;
+    }
+
+
+    .info__trailer{
+        position: absolute;
+        z-index: 110;
+        left: 50%;
+        transform: translateX(-50%);
+
+        opacity: 0;
+        display: none;
+        transition: opacity,display .5s;
+
+        img{
+            position: absolute;
+            left: 100%;
+            top:0%;
+            transform: translate(-50%,-50%);
+
+            height: 4rem;
+
+            cursor: pointer;
+        }
+
+        .info__trailer__video{
+
+            iframe{
+                height: 40rem;
+                width: 70rem;
+            }
+        }
+    }
+
+
+
+
+    
+    .info__left{
+        width: 50%;
+
+        h1{
+            font-size: 30px;
+            color: #55c1ff;
+        }
+        p{
+            font-size: 23px;
+            font-weight: 400;
+            margin-top: .5rem;
+        }
+
+        .line{
+            height: 2px;
+            width: 100%;
+            background-color: #55c1ff;
+            position: relative;
+            top: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .info__left__watch{
+            text-align: center;
+            margin-top: 2rem;
+            
+            h2{
+                font-size: 22px;
+                color: #55c1ff;
+                margin-bottom: 10px;
+            }
+
+            .info__left__watch__btns{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                .btnWatch {
+                    padding: 1rem 2.5rem;
+                    border: none;
+                    border-radius: 15px;
+                    transition: .5s;
+
+
+                    a{
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 19px;  
+                    }
+
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        transition: .5s;
+                        color: #1a6fa0;
+                    }
+
+                    &:hover{
+                        background-color: #55c1ff;
+                    }
+                    &:hover span{
+                        color: aliceblue;
+                    }
+
+
+                    img{
+                        height: 2rem;
+                        filter: hue-rotate(100);
+                    }
+                }
+            }
+
+            p{
+                margin-top: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .info__right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+        }
+
+        img{
+            margin-top: 1rem;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+            cursor: pointer;    
+            filter:  brightness(120%);
+            z-index: 1;
+
+            transition: all .5s;
+
+            &:hover{
+                filter: brightness(70%);
+                z-index: 0;
+            }
+        }
+    }
+
+}
+
+
+.persona {
+    position: relative;
+    top: 95vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -83,7 +268,7 @@ body{
     background-position: center;
     transition: all .5s;
 
-    img{
+    img {
         opacity: 500ms;
         height: auto;
         width: 45vw;
@@ -91,8 +276,8 @@ body{
         gap: .5rem;
         cursor: pointer;
         box-shadow: 1px 2px 8px 10px rgba(0, 0, 0, 0.154);
-        
-        &:hover{
+
+        &:hover {
             filter: contrast(110%);
             box-shadow: 1px 2px 8px 10px rgba(0, 0, 0, 0.292);
             transform: translateY(-.5rem) scale(1.01);

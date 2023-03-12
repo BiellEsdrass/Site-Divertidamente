@@ -5,6 +5,19 @@ let nojo = document.querySelector('#persona__disgust');
 let raiva = document.querySelector('#persona__anger');
 let medo = document.querySelector('#persona__fear');
 
+let btnDisney = document.querySelector('.btnWatch');
+let imgDisney = document.getElementById('imgDisney');
+
+btnDisney.addEventListener('mouseover', function (){
+    imgDisney.src = '/imgs/iconDisneyWhite.png'
+    
+    btnDisney.addEventListener('mouseleave', function (){
+        imgDisney.src = '/imgs/iconDisney.png'
+    })
+})
+
+
+
 
 protagonista.addEventListener('mouseover', function(){
     protagonista.src = '/imgs/protaOn.jpg';
@@ -51,5 +64,18 @@ medo.addEventListener('mouseover', function(){
 
     medo.addEventListener('mouseleave', function(){
         medo.src = '/imgs/medoOff.jpg'
+    })
+})
+
+
+
+
+let imgTrailer = document.getElementById('imgTrailer');
+
+imgTrailer.addEventListener('mouseover', function(){
+    imgTrailer.src = '/imgs/trailerOn.jpg'
+
+    imgTrailer.addEventListener('mouseleave', function(){
+        imgTrailer.src = '/imgs/TrailerOff.jpg'
     })
 })

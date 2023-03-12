@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap");
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,6 +13,7 @@ body {
   width: 100%;
   background-image: url(/imgs/backGroundHeader.jpg);
   background-size: cover;
+  background-attachment: fixed;
   background-position: center top;
 }
 
@@ -50,9 +53,150 @@ body {
   height: 22rem;
 }
 
-.persona {
+.info {
+  padding: 5rem 3rem;
+  background-color: transparent;
+  -webkit-backdrop-filter: brightness(50%) blur(10px);
+          backdrop-filter: brightness(50%) blur(10px);
+  border-top: 2px solid rgba(255, 255, 255, 0.447);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.447);
+  position: relative;
+  top: 95vh;
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+}
+.info .trailer__blur {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.836);
   position: absolute;
-  top: 90vh;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+.info .info__trailer {
+  position: absolute;
+  z-index: 110;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: opacity, display 0.5s;
+}
+.info .info__trailer img {
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  height: 4rem;
+  cursor: pointer;
+}
+.info .info__trailer .info__trailer__video iframe {
+  height: 40rem;
+  width: 70rem;
+}
+.info .info__left {
+  width: 50%;
+}
+.info .info__left h1 {
+  font-size: 30px;
+  color: #55c1ff;
+}
+.info .info__left p {
+  font-size: 23px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+.info .info__left .line {
+  height: 2px;
+  width: 100%;
+  background-color: #55c1ff;
+  position: relative;
+  top: 3rem;
+  margin-bottom: 5rem;
+}
+.info .info__left .info__left__watch {
+  text-align: center;
+  margin-top: 2rem;
+}
+.info .info__left .info__left__watch h2 {
+  font-size: 22px;
+  color: #55c1ff;
+  margin-bottom: 10px;
+}
+.info .info__left .info__left__watch .info__left__watch__btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 19px;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s;
+  color: #1a6fa0;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch:hover {
+  background-color: #55c1ff;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch:hover span {
+  color: aliceblue;
+}
+.info .info__left .info__left__watch .info__left__watch__btns .btnWatch img {
+  height: 2rem;
+  filter: hue-rotate(100);
+}
+.info .info__left .info__left__watch p {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+.info .info__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info .info__right p {
+  text-align: center;
+}
+.info .info__right h1 {
+  font-size: 30px;
+  text-align: center;
+}
+.info .info__right img {
+  margin-top: 1rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  filter: brightness(120%);
+  z-index: 1;
+  transition: all 0.5s;
+}
+.info .info__right img:hover {
+  filter: brightness(70%);
+  z-index: 0;
+}
+
+.persona {
+  position: relative;
+  top: 95vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
