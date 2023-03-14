@@ -48,6 +48,11 @@ body {
                 font-weight: 400;
                 font-size: 19px;
                 margin-left: .8rem;
+                trasition: all .5s;
+                
+                &:hover{
+                    color: #247fb2;
+                }
             }
         }
     }
@@ -192,11 +197,11 @@ body {
                         align-items: center;
                         gap: 5px;
                         transition: .5s;
-                        color: #1a6fa0;
+                        color: #146492;
                     }
 
                     &:hover{
-                        background-color: #247fb2;
+                        background-color: #146492;
                     }
                     &:hover span{
                         color: aliceblue;
